@@ -38,9 +38,9 @@ pipeline {
            steps {
 		      script {
 			     withCredentials([string(credentialsId: 'dockerhubC', variable: 'dockerhubC')]){
-                 sh 'docker login docker.io -u satyam88 -p ${dockerhubC}'
+                 sh 'docker login docker.io -u vipulpatil -p ${dockerhubC}'
                  echo "Push Docker Image to DockerHub : In Progress"
-				 sh 'docker push satyam88/linuxacademy:latest'
+				 sh 'docker push vipulpatil/linuxacademy:latest'
 				 echo "Push Docker Image to DockerHub : In Progress"
 				 }
               }
